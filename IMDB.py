@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-
-url = 'https://www.imdb.com/list/ls561315941/?ref_=otl_4&sort=user_rating,desc&st_dt=&mode=detail&page=1'
-
+import csv
+#url = 'https://www.imdb.com/list/ls561315941/?ref_=otl_4&sort=user_rating,desc&st_dt=&mode=detail&page=1'
+url = 'https://www.imdb.com/list/ls059259321/?sort=user_rating,desc&st_dt=&mode=detail&page=1'
+        
 # Send a GET request to the URL
 page = requests.get(url)
 
@@ -29,6 +30,7 @@ if page.status_code == 200:
     rating_list = []
     #number_for_list = 0
     number = 1
+    final_movie_list = []
 
     for rating_element in rating_elements:
         empty_cell = "N/A"
@@ -104,9 +106,18 @@ if page.status_code == 200:
 
     for item1, item2 in zip(movie_list, rating_list):
         item1.append(item2)
-        print(item1)
+        final_movie_list.append(item1)
+        #print(item1)
         numbers += 1        
 
+
+        # Step 3: Opening a CSV file in write mode
+    with open('IMDB_movies.csv', 'a', newline='') as file:
+        # Step 4: Using csv.writer to write the list to the CSV file
+        writer = csv.writer(file)
+        writer.writerows(final_movie_list) # Use writerows for nested list
+
+    # Step 5: The file is automatically closed when exiting the 'with' bloc
 
 else:
     print(f"Failed to fetch the page. Status code: {page.status_code}")
