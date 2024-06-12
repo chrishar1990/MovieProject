@@ -1,15 +1,18 @@
-Welcome to your new dbt project!
+# Readme
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
+## Movie Rating Analysis
+   This project was used to grab data from the top 100 movies by rating for each year from 2014-2023. It also includes the Genre, Admission, Mintues and rating. The information was webscraped from IMDB.
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+## Tools and websites used.
+* Matplotlib
+* BeautifulSoup
+* Postgres SQL
+* Looker Studio
+* Pandas
+* Jupyter Notebook
+* Python
+* Docker
+
+
