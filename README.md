@@ -15,4 +15,8 @@
 * Python
 * Docker
 
+## Information from Rating
 
+ ![ratings Information](https://github.com/chrishar1990/MovieProject/blob/main/analyses/MeanMedianRating.png?raw=true)
+
+- Using the information above we can see that The highest rating is a 9.2. Miniumum is 6.4, while the Mean is 7.51 for the Top 100 movies each year over a decade.
